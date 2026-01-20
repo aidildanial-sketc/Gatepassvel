@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MailTestController;
+
+Route::get('/test-mail', [MailTestController::class, 'send']);
+
 
 Route::get('/', function () {
     return view('dashboard');
@@ -21,6 +25,7 @@ Route::get('/notifikasi', function () {
 Route::get('/profil', function () {
     return view('profil');
 });
+
 
 
 
